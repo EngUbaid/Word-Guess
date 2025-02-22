@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:word_guess/Utils/utils.dart';
-import '../AppModules/Level_2_Module/Controler/LevelController.dart';
+import '../AppModules/Controler/LevelControler.dart';
 import 'draw_liner.dart';
 
 commoncontainer(LevelController controller) {
@@ -67,7 +67,7 @@ commoncontainer(LevelController controller) {
               width: 35,
               fit: BoxFit.cover,
             )
-            // Icon(Icons.shuffle, size: 40),
+            
           ],
         ),
       ),

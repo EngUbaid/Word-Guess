@@ -39,7 +39,7 @@ SettingWidget() {
               tittle: Row(
                 children: [
                   Image.asset("assets/coins.png"),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Text(

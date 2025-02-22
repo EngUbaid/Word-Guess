@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:word_guess/AppModules/Level1Modile/views/spelling_view._level1.dart';
-import 'package:word_guess/AppModules/Level_2_Module/Views/level2_view.dart';
 import 'package:word_guess/Utils/utils.dart';
+import 'package:word_guess/main.dart';
 import '../../../Widgets/letter_container.dart';
 import '../../../Widgets/level_view_widget.dart';
-import '../../Level_2_Module/Controler/LevelController.dart';
+import '../../Controler/LevelControler.dart';
+import '../../Spelling_Module/Views/spelling_views.dart';
 
 class LevelOneView extends StatelessWidget {
   const LevelOneView({super.key});
@@ -20,11 +20,9 @@ class LevelOneView extends StatelessWidget {
           "C": Offset(50, 135),
           "T": Offset(145, 135),
         },
-
-        nextLevelView: SpellingViewLevel1(),
-        
+        // nextLevelView: SpellingViewLevel1(),
+        nextLevelView: SpellingView(levelIndex: 1)
       ),
-      
     );
 
     return LevelScreen(
@@ -45,27 +43,27 @@ class LevelOneView extends StatelessWidget {
                                 controller.completedWords.contains("ACT")
                                     ? "A"
                                     : "",
-                                AppColors.boxblueColor),
+                                AppColors.buttonColor),
                             letterContainer(
                                 controller.completedWords.isNotEmpty ? "C" : "",
-                                AppColors.boxblueColor),
+                                AppColors.buttonColor),
                             letterContainer(
                                 controller.completedWords.contains("ACT")
                                     ? "T"
                                     : "",
-                                AppColors.boxblueColor),
+                                AppColors.buttonColor),
                           ],
                         ),
                         letterContainer(
                             controller.completedWords.contains("CAT")
                                 ? "A"
                                 : "",
-                            AppColors.boxblueColor),
+                            AppColors.buttonColor),
                         letterContainer(
                             controller.completedWords.contains("CAT")
                                 ? "T"
                                 : "",
-                            AppColors.boxblueColor),
+                            AppColors.buttonColor),
                       ],
                     ),
                   ),

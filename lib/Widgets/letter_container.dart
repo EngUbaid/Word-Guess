@@ -5,7 +5,6 @@ Widget letterContainer(String letter, color) {
     width: 50,
     height: 50,
     margin: EdgeInsets.all(5),
-  
     alignment: Alignment.center,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(50),

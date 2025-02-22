@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:word_guess/Widgets/common_white_cotainer.dart';
-import '../AppModules/Level_2_Module/Controler/LevelController.dart';
+import '../AppModules/Controler/LevelControler.dart';
 import '../Utils/utils.dart';
 import 'setting_wifget.dart';
 
@@ -11,24 +12,27 @@ class LevelScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Stack(
+    final height = Get.height;
+
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(level1Image),
+            fit: BoxFit.cover,
+          ),
+        ),
+
+        child: Column(
           children: [
-            commonimage(level2Image),
             SettingWidget(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(height: 50),
-                simole,
-                SizedBox(height: 50),
-                commoncontainer(controller),
-                SizedBox(height: 30),
-              ],
-            ),
+            SizedBox(height: height / 19),
+            simole,
+            SizedBox(height: height / 12),
+            commoncontainer(controller),
           ],
         ),
+        // ],
       ),
     );
   }

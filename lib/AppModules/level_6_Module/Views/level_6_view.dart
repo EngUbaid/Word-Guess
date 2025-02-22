@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:word_guess/AppModules/level_6_Module/Views/spelling_view._level6.dart';
 import 'package:word_guess/Utils/utils.dart';
 import '../../../Widgets/letter_container.dart';
 import '../../../Widgets/level_view_widget.dart';
-import '../../Level_2_Module/Controler/LevelController.dart';
+import '../../Controler/LevelControler.dart';
+import '../../Spelling_Module/Views/spelling_views.dart';
 
 class Level6View extends StatelessWidget {
   const Level6View({super.key});
@@ -20,8 +20,8 @@ class Level6View extends StatelessWidget {
           "R": Offset(160, 100),
           "D": Offset(100, 150),
         },
-
-        nextLevelView: SpellingViewLevel6(), 
+nextLevelView: SpellingView(levelIndex: 6)
+        //nextLevelView: SpellingViewLevel6(), 
       ),
        tag: 'level6',
     );

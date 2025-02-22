@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:word_guess/AppModules/level_4_Module/Views/spelling_view._level4.dart';
 import 'package:word_guess/Utils/utils.dart';
 import '../../../Widgets/letter_container.dart';
 import '../../../Widgets/level_view_widget.dart';
-import '../../Level_2_Module/Controler/LevelController.dart';
+import '../../Controler/LevelControler.dart';
 import '../../Level_5_Module/Views/level_5_view.dart';
-import '../../level_3_Module/Views/level_3_view.dart';
+import '../../Spelling_Module/Views/spelling_views.dart';
 
 class Level4View extends StatelessWidget {
   const Level4View({super.key});
@@ -14,17 +13,19 @@ class Level4View extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final LevelController controller = Get.put(
-      LevelController(
-        validWords: ["SALT", "ALT", "LAST", "TALS"],
-        letterPositions: {
-          "A": Offset(100, 33),
-          "S": Offset(40, 100),
-          "T": Offset(160, 100),
-          "L": Offset(100, 145),
-        },
-
-        nextLevelView: SpellingViewLevel4(), // Move to Level 3 after completion
-      ),
+      LevelController(validWords: [
+        "SALT",
+        "ALT",
+        "LAST",
+        "TALS"
+      ], letterPositions: {
+        "A": Offset(100, 33),
+        "S": Offset(40, 100),
+        "T": Offset(160, 100),
+        "L": Offset(100, 145),
+      }, nextLevelView: SpellingView(levelIndex: 4)
+          //  nextLevelView: SpellingViewLevel4(), // Move to Level 3 after completion
+          ),
       tag: 'level4',
     );
 

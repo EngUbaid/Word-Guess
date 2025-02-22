@@ -15,12 +15,21 @@ class CommonSpellingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-         commonimage(secondImage),
+      body: Container(
+        // children: [
+        // commonimage(secondImage),
+         width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image:
+                    AssetImage(secondImage), 
+                fit: BoxFit.cover,
+              ),
+            ),
 
           // Content
-          Center(
+        child:   Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +56,7 @@ class CommonSpellingWidget extends StatelessWidget {
               ],
             ),
           ),
-        ],
+      //  ],
       ),
     );
   }

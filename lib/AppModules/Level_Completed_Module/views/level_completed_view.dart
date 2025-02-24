@@ -189,6 +189,8 @@ import '../../../Utils/utils.dart';
 import '../../../Widgets/app_btn.dart';
 import '../../../Widgets/setting_wifget.dart';
 import '../../Level_5_Module/Views/level_5_view.dart';
+import '../../Level_8_Module/Views/level_8_views.dart';
+import '../../lLevel_7_Mofule/Views/level_7_view.dart';
 import '../../level_3_Module/Views/level_3_view.dart';
 import '../../level_4_Module/Views/level_4_view.dart';
 import '../../level_6_Module/Views/level_6_view.dart';
@@ -210,6 +212,10 @@ class LevelCompletedViews extends StatelessWidget {
         return Level5View();
       case 5:
         return Level6View();
+      case 6:
+        return Level7View();
+      case 8:
+        return Level8View();
 
       default:
         return SplashView(); // Default case (restart or home)
